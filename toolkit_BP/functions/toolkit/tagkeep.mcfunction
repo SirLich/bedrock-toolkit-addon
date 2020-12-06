@@ -1,1 +1,1 @@
-tag @e[type=!player,r=..1.5] add keep
+tag @e[type=!player,r=2,rm=0] add keep
