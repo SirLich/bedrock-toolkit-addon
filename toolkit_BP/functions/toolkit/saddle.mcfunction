@@ -1,1 +1,1 @@
-/give @s saddle
+give @s saddle
