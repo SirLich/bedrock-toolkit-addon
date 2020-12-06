@@ -5,7 +5,7 @@ give @s wooden_slab 1 4
 give @s acacia_trapdoor
 give @s fence 1 4
 give @s acacia_fence_gate
-give @s log 1 4
+give @s log2
 give @s acacia_pressure_plate
 give @s acacia_button
 give @s stripped_acacia_log
