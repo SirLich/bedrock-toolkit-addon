@@ -1,0 +1,8 @@
+pack.name=Toolkit
+pack.description=Toolkit for developing addons.
+
+item.spawn_egg.entity.toolkit:warp_target.red.name=§cRed Warp target
+item.spawn_egg.entity.toolkit:warp_target.yellow.name=§6Yellow Warp target
+item.spawn_egg.entity.toolkit:warp_target.green.name=§aGreen Warp target
+item.spawn_egg.entity.toolkit:warp_target.blue.name=§9Blue Warp target
+

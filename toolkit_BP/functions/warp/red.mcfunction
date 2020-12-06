@@ -1,0 +1,1 @@
+teleport @s @e[family=red_warp_target]

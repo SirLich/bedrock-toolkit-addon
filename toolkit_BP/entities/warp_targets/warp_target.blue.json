@@ -1,0 +1,110 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "toolkit:warp_target.blue",
+            "is_spawnable": true,
+            "is_summonable": true,
+            "is_experimental": false,
+            "scripts": {
+                "animate": [
+                    "toolkit:warp_target.blue_commands"
+                ]
+            },
+            "animations": {
+                "toolkit:warp_target.blue_commands": "controller.animation.toolkit_warp_target_blue"
+            }
+        },
+        "components": {
+            "minecraft:tick_world": {},
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "on_damage": {
+                        "filters": {}
+                    },
+                    "deals_damage": false
+                }
+            },
+            "minecraft:scale": {
+                "value": 1
+            },
+            "minecraft:collision_box": {
+                "width": 1,
+                "height": 0.5
+            },
+            "minecraft:push_through": {
+                "value": 1
+            },
+            "minecraft:health": {
+                "value": 5,
+                "max": 5
+            },
+            "minecraft:physics": {},
+            "minecraft:nameable": {}
+        },
+        "component_groups": {
+            "echo:state_spawn": {
+                "minecraft:type_family": {
+                    "family": [
+                        "blue_warp_target"
+                    ]
+                }
+            },
+            "echo:spawn": {
+                "minecraft:skin_id": {
+                    "value": 1
+                }
+            },
+            "echo:execute_no_command": {
+                "minecraft:skin_id": {
+                    "value": 0
+                }
+            },
+            "echo:despawn": {
+                "minecraft:instant_despawn": {}
+            }
+        },
+        "events": {
+            "minecraft:entity_spawned": {
+                "add": {
+                    "component_groups": [
+                        "echo:spawn"
+                    ]
+                }
+            },
+            "echo:clear": {
+                "add": {
+                    "component_groups": [
+                        "echo:execute_no_command"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "echo:state_spawn"
+                    ]
+                }
+            },
+            "echo:despawn": {
+                "add": {
+                    "component_groups": [
+                        "echo:despawn"
+                    ]
+                }
+            },
+            "echo:state_spawn": {
+                "add": {
+                    "component_groups": [
+                        "echo:state_spawn"
+                    ]
+                }
+            },
+            "echo:spawn": {
+                "add": {
+                    "component_groups": [
+                        "echo:spawn"
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "toolkit:warp_target.red",
+            "materials": {
+                "default": "entity"
+            },
+            "geometry": {
+                "default": "geometry.warp_target"
+            },
+            "render_controllers": [
+                "controller.render.single_texture"
+            ],
+            "textures": {
+				"default": "textures/entity/warp_target/red"
+            }
+        }
+    }
+}

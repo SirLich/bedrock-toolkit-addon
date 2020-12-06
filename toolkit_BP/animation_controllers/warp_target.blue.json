@@ -1,0 +1,28 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.toolkit_warp_target_blue": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "echo_spawn": "query.skin_id == 1"
+                        }
+                    ]
+                },
+                "echo_spawn": {
+                    "transitions": [
+                        {
+                            "default": "query.skin_id != 1"
+                        }
+                    ],
+                    "on_entry": [
+                        "@s echo:clear",
+                        "/kill @e[family=blue_warp_target]",
+                        "@s echo:state_spawn"
+                    ]
+                }
+            }
+        }
+    }
+}
