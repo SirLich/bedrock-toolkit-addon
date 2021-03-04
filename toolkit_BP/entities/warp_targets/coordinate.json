@@ -1,0 +1,59 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "toolkit:coordinates",
+            "is_spawnable": true,
+            "is_summonable": true,
+            "is_experimental": false,
+            "scripts": {
+                "animate": [
+                    "toolkit:coordinates"
+                ]
+            },
+            "animations": {
+                "toolkit:coordinates": "controller.animation.toolkit.coordinates"
+            }
+        },
+        "components": {
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "on_damage": {
+                        "filters": {}
+                    },
+                    "deals_damage": false
+                }
+            },
+            "minecraft:scale": {
+                "value": 1
+            },
+            "minecraft:collision_box": {
+                "width": 1,
+                "height": 0.5
+            },
+            "minecraft:push_through": {
+                "value": 1
+            },
+            "minecraft:health": {
+                "value": 5,
+                "max": 5
+            },
+            "minecraft:physics": {},
+            "minecraft:nameable": {}
+        },
+        "component_groups": {
+            "toolkit:despawn": {
+                "minecraft:instant_despawn": {}
+            }
+        },
+        "events": {
+            "toolkit:despawn": {
+                "add": {
+                    "component_groups": [
+                        "toolkit:despawn"
+                    ]
+                }
+            }
+        }
+    }
+}

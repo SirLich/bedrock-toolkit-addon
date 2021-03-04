@@ -1,0 +1,26 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.toolkit.coordinates": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "coordinates": "query.is_alive == 1"
+                        }
+                    ]
+                },
+                "coordinates": {
+                    "on_entry": [
+                        "query.log(1.111);",
+                        "query.log(query.position(0));",
+                        "query.log(query.position(1));",
+                        "query.log(query.position(2));",
+                        "/say HEY!",
+                        "@s toolkit:despawn"
+                    ]
+                }
+            }
+        }
+    }
+}
